@@ -1,4 +1,4 @@
-# UniBrain
+# BrainNet
 
 ## Usage
 

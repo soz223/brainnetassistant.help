@@ -5,10 +5,10 @@ import { createTheme } from '@mui/material/styles';
 const theme = createTheme({
     palette: {
         primary: {
-            main: '#1e376d',
+            main: '#1a3a6b',  // BrainNet deep blue
         },
         secondary: {
-            main: '#d9ab28',
+            main: '#6C63FF',  // BrainNet purple accent
         },
 
         error: {

@@ -3,14 +3,14 @@ import {
   Button,
   Container,
   Grid,
+  Typography,
 } from '@mui/material'
-// import { makeStyles } from '@mui/styles'
 import { graphql } from 'gatsby'
 import Typewriter from "typewriter-effect";
 
 // import headerImage from '../images/header-image.svg'
 
-import headerImage from '../images/unibrain-header.png'
+import headerImage from '../images/brainnet-header.png'
 
 // const headerHeight = '500px'
 
@@ -76,12 +76,19 @@ const IndexPage = ({ data }) => {
           </Grid>
 
           <Grid item>
-            <Button
-              variant="contained"
-              component="a"
-              href="/get-started"
-            >
+            <Typography variant="h6" style={{ color: '#555', fontFamily: 'Roboto', marginBottom: '20px', maxWidth: '480px' }}>
+              A systematic benchmark for functional brain network generation and analysis from resting-state fMRI.
+            </Typography>
+          </Grid>
+          <Grid item style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+            <Button variant="contained" component="a" href="/get-started">
               Get Started
+            </Button>
+            <Button variant="outlined" component="a" href="/advanced">
+              Methods
+            </Button>
+            <Button variant="outlined" component="a" href="/models">
+              Leaderboard
             </Button>
           </Grid>
         </Grid>
