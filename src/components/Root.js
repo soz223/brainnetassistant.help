@@ -25,38 +25,24 @@ const links = [
   },
   {
     href: '/advanced',
-    label: 'Advanced',
+    label: 'Methods',
   },
   {
     href: '/datasets',
     label: 'Datasets',
   },
-  // {
-  //   href: '/preprocessing',
-  //   label: 'Preprocessing',
-  // },
   {
     href: '/models',
-    label: 'Models',
+    label: 'Leaderboard',
   },
-
   {
     href: '/team',
     label: 'Team',
   },
-
-  // {
-  //   href: 'https://brainnn.us',
-  //   label: 'Workshop',
-  // }
-  // {
-  //   href: '/demo_video',
-  //   label: 'Demo Video',
-  // },
-    {
-    href: 'http://128.180.121.111:8501/',
-    label: 'Demo',
-  }
+  {
+    href: 'https://pypi.org/project/brainnet-graph/',
+    label: 'PyPI',
+  },
 ]
 
 function MainMenu() {

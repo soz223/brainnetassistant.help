@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://brainnet.us/',
-    title: 'Brain Network'
+    title: 'BrainNet'
   },
   plugins: [
     'gatsby-plugin-image',

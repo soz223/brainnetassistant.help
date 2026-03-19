@@ -1,109 +1,104 @@
-### 🚀 Try Me – One Click, Done Quick!
+## Quick Start
 
-You can drop in a NIfTI file, watch every preprocessing step unfold in real time, explore the resulting connectome interactively, and ask questions in plain English or any natural language — all without leaving your web browser.
-
-It pairs Streamlit’s reactive UI with LangChain’s tool-calling so you can **see**, **tweak**, and **interrogate** each stage of the pipeline:
-
-- skull-stripping → affine registration → tissue segmentation → AAL parcellation → graph construction → disease classification  
-- fully **interactive**: 2D slice viewer, 3D Plotly volume, heat-map / graph visualizations, one-click downloads  
-- **pipeline orchestration by natural-language** – e.g. `run the pipeline without segmentation`, `enable network`  
-- **RAG-powered Q & A** over both your outputs **and** the UniBrain paper itself
-
-### ⏳ We are working hard to enhance the tool, and a new version will be released soon.
-
----
-
-<!-- ![UniBrain Pipeline Structure](../images/unibrainstructure.png)
-
-A schematic overview of the UniBrain processing pipeline, illustrating the end-to-end workflow from input neuroimaging data (NIfTI/DICOM) through segmentation, registration, parcellation, network analysis, and final interactive chat-based querying.
-
---- -->
-
-## 🚀 Quick Start (Self-Deployment)
+Install the open-source `brainnet-graph` package from PyPI:
 
 ```bash
-git clone https://github.com/soz223/UniBrainAssistant.git
-cd UniBrainAssistant
-python3 -m venv .venv && source .venv/bin/activate      # optional
-pip install -r requirements.txt
-export OPENAI_API_KEY="sk-..."                         # for LLM chat & RAG
-streamlit run app.py
-````
-
-add something
-
-Open [http://localhost:8501](http://localhost:8501/) → upload a NIfTI (or DICOM) → pick processing steps → **Run**.
-Then interact with your scan:
-
-```
-❯ skip segmentation             # run without the Segmentation step
-❯ what does a high dice score mean?
-❯ show only the network analysis stage
+pip install brainnet-graph
 ```
 
----
-
-## 🔑 Environment Variables
-
-| Var              | Purpose                                                 |
-| ---------------- | ------------------------------------------------------- |
-| `OPENAI_API_KEY` | Required for chat, command-parser LLM, and RAG          |
-| `IMG_SIZE`       | (optional) override default 96³ voxel input size        |
-| `ATLAS`          | (optional) specify brain atlas (e.g., “Desikan”, “AAL”) |
+Full documentation and usage examples are available at [brainnet-graph.readthedocs.io](https://brainnet-graph.readthedocs.io/).
 
 ---
 
-## 📦 Core Dependencies
+## What is BrainNet?
 
-* **UI & Workflow:** `streamlit ≥1.32`
-* **Imaging & ML:** `torch`, `numpy`, `nibabel`, `SimpleITK`, `plotly`, `networkx`
-* **LLM & RAG:** `langchain`, `langchain-openai`, `faiss-cpu`, `openai (≥1.0)`
+BrainNet is a systematic benchmark and open toolkit for constructing ROI-based functional brain networks from resting-state fMRI data. It evaluates **33 pipelines** under a unified framework, covering:
 
-See `requirements.txt` for exact version pins.
-
----
-
-## 🤖 Command Grammar (for reference)
-
-| Intent           | Examples (case-insensitive)                                        |
-| ---------------- | ------------------------------------------------------------------ |
-| **Skip step**    | `skip segmentation`, `no parcellation`, `without network`          |
-| **Enable step**  | `enable analysis`, `turn on registration`, `enable classification` |
-| **Reset**        | `reset steps`, `reset pipeline`                                    |
-| **General chat** | anything else → routed to the UniBrain chat assistant              |
-
-**Processing flow:**
-
-1. **Regex fast-path**
-2. if unresolved → **GPT-4o-mini** (`CMD_SYS_PROMPT`) → JSON command
-
-
+- **Node parcellations**: AAL116, Schaefer100, Power264
+- **Connectivity measures**: Pairwise (Pearson, Spearman, Kendall, Partial Correlation, Mutual Information, etc.), Higher-Order FC (tHOFC, aHOFC, dHOFC), End-to-end models (FBNetGen, Graph Autoencoder, DABNet)
+- **Sparsification strategies**: Absolute thresholding, Proportional thresholding, OMST, Binarization
+- **Graph types**: Static and Dynamic
 
 ---
 
-## 🌐 Try the Demo Website
+## Key Features
 
-1. Visit the live demo at [Ongoing Website](https://unibrain-assistant.demo)
-2. Enter your `OPENAI_API_KEY` in the sidebar API key field
-3. Upload a `.nii` or `.nii.gz` file
-4. Use the sidebar menu to enable/disable steps, then click **Run**
-5. Chat with your data right in the browser:
+| Feature | Details |
+|---------|---------|
+| **20+ connectivity methods** | Pairwise correlations, HOFC, end-to-end learned edges |
+| **3 parcellation atlases** | AAL116, Schaefer100, Power264 |
+| **3 benchmark datasets** | ADNI, HCP S1200, ADHD-200 |
+| **Unified GNN classifier** | Fixed NeuroGraph-based evaluation protocol |
+| **PyTorch Geometric output** | Exports `.pt` graph files or `.csv` edge lists |
+| **Python API + CLI** | Seamless integration into neuroimaging pipelines |
 
-   ```
-   ❯ What can you do?
-   ❯ Run the whole pipeline on the uploaded image
-   ❯ Skip segmentation and do the whole preprocessing
-   ❯ How does parcellation work?
-   ```
+---
 
-## 🖼️ Demo
+## Python API Example
 
-<p align="center">
-<img src="./images/demo1.png" alt="Upload & preprocessing" width="100%"/>
-<img src="./images/demo2.png" alt="Interactive slice viewer" width="100%"/>
-<img src="./images/demo3.png" alt="3‑D volumetric viewer" width="100%"/>
-</p>
-<p align="center">
-<img src="./images/demo4.png" alt="Graph visualisation" width="100%"/>
-<img src="./images/demo5.png" alt="Chat‑driven control" width="100%"/>
-</p>
+```python
+from brainnet_graph import build_graph
+
+# Build a static functional brain graph using Pearson correlation
+graph = build_graph(
+    bold_timeseries="subject_bold.csv",  # ROI x time matrix
+    method="pearson",
+    parcellation="AAL116",
+    threshold=0.3,
+    threshold_type="proportional",
+)
+
+# graph is a PyTorch Geometric Data object
+print(graph)
+```
+
+---
+
+## Supported Connectivity Methods
+
+### Pairwise Correlation
+- Pearson Correlation
+- Spearman Correlation
+- Kendall Correlation
+- Partial Correlation
+- Cosine Similarity
+- Euclidean Distance
+- Mutual Information
+- Wavelet Coherence
+- Granger Causality
+- Distance Correlation
+- And more...
+
+### Higher-Order Functional Connectivity (HOFC)
+- Correlation's Correlation (tHOFC)
+- Associated HOFC (aHOFC)
+- Dynamics-Based HOFC (dHOFC)
+
+### End-to-End Models
+- FBNetGen
+- Graph Autoencoder
+- DABNet
+
+---
+
+## Output Formats
+
+```
+brainnet-graph outputs/
+├── graph.pt          ← PyTorch Geometric Data object
+├── adjacency.csv     ← edge list in CSV format
+└── report.json       ← runtime metadata and graph statistics
+```
+
+---
+
+## Benchmark Protocol
+
+All methods are evaluated under a unified 5-fold cross-validation protocol:
+
+1. **Preprocessing**: fMRIPrep-based pipeline (brain extraction, motion correction, normalization, smoothing)
+2. **Parcellation**: Map BOLD signals to ROI atlases (AAL116 / Schaefer100 / Power264)
+3. **Connectivity construction**: Apply chosen method to compute ROI-level adjacency matrix
+4. **Filtering**: Apply sparsification (absolute or proportional threshold)
+5. **GNN classification**: NeuroGraph-based classifier (graph convolution + residual + MLP)
+6. **Evaluation**: AUROC, Accuracy, Sensitivity, Specificity, F1, Precision — mean ± s.d. over 5 folds
