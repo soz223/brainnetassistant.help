@@ -123,7 +123,7 @@ export const Root = ({ element }) => {
             component="nav"
             position="sticky"
             // sx={{ backgroundColor: '#616161' }}  // new color grey
-            sx={{ backgroundColor: '#6C63FF' }}  // new color purple
+            sx={{ backgroundColor: '#1976D2' }}  // blue
 
           >
             <Toolbar>

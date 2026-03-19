@@ -63,7 +63,7 @@ const IndexPage = ({ data }) => {
             fontWeight: 'bolder',
             fontSize: '100px',
             // color: '#1e376d', // dark blue
-            color: '#673AB7', // dark purple
+            color: '#1976D2', // blue
             alignItems: 'flex-start',
           }}>
             <Typewriter
