@@ -129,7 +129,7 @@ export const Root = ({ element }) => {
           <link rel="stylesheet"
             href="https://fonts.googleapis.com/icon?family=Material+Icons" />
           <meta name="viewport" content="initial-scale=1, width=device-width" />
-          <title>UniBrainAssistant</title>
+          <title>BrainNet</title>
         </Helmet>
         <ScopedCssBaseline>
           <CssBaseline />
@@ -152,7 +152,7 @@ export const Root = ({ element }) => {
                     }
                   }>
                     <CSLogoIcon width={50} height={50} />
-                    <p style={{ color: 'white', marginBottom: '0rem', fontFamily: 'Courier New', fontWeight: 'bolder' }}>UniBrainAssistant</p>
+                    <p style={{ color: 'white', marginBottom: '0rem', fontFamily: 'Courier New', fontWeight: 'bolder' }}>BrainNet</p>
                   </Container>
                 </IconButton>
                 <Typography sx={{ flexGrow: 1 }} />
@@ -172,7 +172,7 @@ export const Root = ({ element }) => {
           >
             <Grid item>
               <Typography variant="caption" textAlign="center">
-                UniBrain Assistant 2025 | Powered by Gatsby
+                BrainNet 2025 | Powered by Gatsby
               </Typography>
             </Grid>
           </Grid>

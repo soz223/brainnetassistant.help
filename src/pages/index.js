@@ -68,7 +68,7 @@ const IndexPage = ({ data }) => {
           }}>
             <Typewriter
                 options={{
-                  strings: 'UniBrain',
+                  strings: 'BrainNet',
                   autoStart: true,
                   loop: false,
                 }}

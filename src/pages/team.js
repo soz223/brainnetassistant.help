@@ -3,7 +3,7 @@ import { Container, Divider, Grow, Grid } from '@mui/material'
 import PersonCard from '../components/PersonCard'
 import { Helmet } from 'react-helmet'
 
-const titleName = "UniBrain - Team"
+const titleName = "BrainNet - Team"
 
 const TeamPage = () => {
   return (
@@ -29,12 +29,6 @@ const TeamPage = () => {
             link="https://engineering.lehigh.edu/faculty/lifang-he"
           />
           <PersonCard
-            name="Xiangnan Kong"
-            photo="/people/XiangnanKong.jpg"
-            position="Worcester Polytechnic Institute"
-            link="https://www.wpi.edu/people/faculty/xkong"
-          />
-          <PersonCard
             name="Carl Yang"
             photo="/people/CarlYang.jpg"
             position="Emory University"
@@ -44,9 +38,38 @@ const TeamPage = () => {
             name="Liang Zhan"
             photo="/people/LiangZhan.jpeg"
             position="University of Pittsburgh"
-            link={'https://www.engineeringx.pitt.edu/People/Faculty/Profiles/Liang-Zhan/'}
+            link="https://www.engineeringx.pitt.edu/People/Faculty/Profiles/Liang-Zhan/"
           />
-
+          <PersonCard
+            name="Yu Zhang"
+            photo="/people/SonglinZhao.jpg"
+            position="Stanford University"
+            link="https://profiles.stanford.edu/yu-zhang"
+          />
+          <PersonCard
+            name="Lichao Sun"
+            photo="/people/SonglinZhao.jpg"
+            position="Lehigh University"
+            link="https://lichao-sun.github.io/"
+          />
+          <PersonCard
+            name="Randy L. Buckner"
+            photo="/people/SonglinZhao.jpg"
+            position="Harvard University"
+            link="https://psychology.fas.harvard.edu/people/randy-l-buckner"
+          />
+          <PersonCard
+            name="Xiang Li"
+            photo="/people/SonglinZhao.jpg"
+            position="Harvard Medical School"
+            link="https://www.massgeneral.org/radiology"
+          />
+          <PersonCard
+            name="Quanzheng Li"
+            photo="/people/SonglinZhao.jpg"
+            position="Harvard Medical School"
+            link="https://www.massgeneral.org/radiology"
+          />
         </Grid>
       </Grow>
 
@@ -55,12 +78,24 @@ const TeamPage = () => {
 
       <Grow in={true} style={{ transformOrigin: '0 0 0' }} {...{ timeout: 1000 }}>
         <Grid container spacing={1} justifyContent='center' paddingBottom='20px'>
-          {/* <PersonCard
-            name="Yurou Dai"
-            photo="/people/YurouDai.jpg"
+          <PersonCard
+            name="Songlin Zhao"
+            photo="/people/SonglinZhao.jpg"
             position="Lehigh University"
-            link="https://www.google.com/search?q=Yurou+Dai"
-          /> */}
+            link="https://www.songlin.my/"
+          />
+          <PersonCard
+            name="Xinwei Luo"
+            photo="/people/SonglinZhao.jpg"
+            position="Lehigh University"
+            link="https://www.google.com/search?q=Xinwei+Luo"
+          />
+          <PersonCard
+            name="Yitian Yang"
+            photo="/people/SonglinZhao.jpg"
+            position="Lehigh University"
+            link="https://www.google.com/search?q=Yitian+Yang"
+          />
           <PersonCard
             name="Keqi Han"
             photo="/people/KeqiHan.jpg"
@@ -68,25 +103,11 @@ const TeamPage = () => {
             link="https://www.google.com/search?q=Keqi+Han"
           />
           <PersonCard
-            name="Yao Su"
-            photo="/people/YaoSu.jpg"
-            position="Worcester Polytechnic Institute"
-            link="https://www.linkedin.com/in/yao-su-b3a056247"
-          />
-          <PersonCard
-            name="Mingjie Zeng"
-            photo="/people/MingjieZeng.jpg"
-            position="Worcester Polytechnic Institute"
-            link="https://www.google.com/search?q=Mingjie+Zeng"
-          />
-          <PersonCard
-            name="Songlin Zhao"
+            name="Ruonan Gong"
             photo="/people/SonglinZhao.jpg"
-            position="Lehigh University"
-            link="https://www.songlin.my/"
+            position="University of Miami"
+            link="https://www.google.com/search?q=Ruonan+Gong"
           />
-
-
         </Grid>
       </Grow>
     </Container>
