@@ -10,7 +10,7 @@ import Typewriter from "typewriter-effect";
 
 // import headerImage from '../images/header-image.svg'
 
-import headerImage from '../images/brainnet-header.png'
+import headerImage from '../images/header-image.svg'
 
 // const headerHeight = '500px'
 

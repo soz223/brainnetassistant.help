@@ -35,17 +35,13 @@ Please cite our paper if you find BrainNet useful for your work:
 
 The general workflow: raw fMRI → preprocessing → parcellation → connectivity construction (static or dynamic) → graph filtering → GNN classifier → clinical prediction.
 
-<p align="center">
-<img src="./images/brainnet_fig1-1.png" alt="BrainNet Pipeline" width="100%"/>
-</p>
+<img src="./images/brainnet_fig1-1.png" alt="BrainNet Pipeline" style="width:100%;min-width:600px;display:block;margin:20px 0;"/>
 
 ## System Architecture
 
 The full system is Dockerized for easy reproduction. Source data are BIDS images. A RAG-enabled agent orchestrates runs, aggregates logs, and returns runtime reports and explanations to users.
 
-<p align="center">
-<img src="./images/brainnet_fig2-1.png" alt="BrainNet System Architecture" width="80%"/>
-</p>
+<img src="./images/brainnet_fig2-1.png" alt="BrainNet System Architecture" style="width:100%;min-width:600px;display:block;margin:20px 0;"/>
 
 ## Key Findings
 
