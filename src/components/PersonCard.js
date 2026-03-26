@@ -40,7 +40,7 @@ export default class PersonCard extends React.Component {
                         width: '150px',
                         height: '150px',
                         fontSize: '70px',
-                        bgcolor: '#1e376d',
+                        bgcolor: '#1976D2',
                     }}
                     imgProps={{
                         sx: {

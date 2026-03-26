@@ -86,13 +86,13 @@ const TeamPage = () => {
           />
           <PersonCard
             name="Xinwei Luo"
-            photo="/people/SonglinZhao.jpg"
+            photo=""
             position="Lehigh University"
             link="https://www.google.com/search?q=Xinwei+Luo"
           />
           <PersonCard
             name="Yitian Yang"
-            photo="/people/SonglinZhao.jpg"
+            photo=""
             position="Lehigh University"
             link="https://www.google.com/search?q=Yitian+Yang"
           />
@@ -104,7 +104,7 @@ const TeamPage = () => {
           />
           <PersonCard
             name="Ruonan Gong"
-            photo="/people/SonglinZhao.jpg"
+            photo=""
             position="University of Miami"
             link="https://www.google.com/search?q=Ruonan+Gong"
           />
