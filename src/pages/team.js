@@ -42,31 +42,31 @@ const TeamPage = () => {
           />
           <PersonCard
             name="Yu Zhang"
-            photo="/people/SonglinZhao.jpg"
+            photo=""
             position="Stanford University"
             link="https://profiles.stanford.edu/yu-zhang"
           />
           <PersonCard
             name="Lichao Sun"
-            photo="/people/SonglinZhao.jpg"
+            photo=""
             position="Lehigh University"
             link="https://lichao-sun.github.io/"
           />
           <PersonCard
-            name="Randy L. Buckner"
-            photo="/people/SonglinZhao.jpg"
+            name="Randy Buckner"
+            photo=""
             position="Harvard University"
             link="https://psychology.fas.harvard.edu/people/randy-l-buckner"
           />
           <PersonCard
             name="Xiang Li"
-            photo="/people/SonglinZhao.jpg"
+            photo=""
             position="Harvard Medical School"
             link="https://www.massgeneral.org/radiology"
           />
           <PersonCard
             name="Quanzheng Li"
-            photo="/people/SonglinZhao.jpg"
+            photo=""
             position="Harvard Medical School"
             link="https://www.massgeneral.org/radiology"
           />
