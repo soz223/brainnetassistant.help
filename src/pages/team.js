@@ -114,6 +114,12 @@ const TeamPage = () => {
             position="Lehigh University"
             link="https://www.google.com/search?q=Stella+Chen+Lehigh"
           />
+          <PersonCard
+            name="Zhicheng Xu"
+            photo=""
+            position=""
+            link="https://www.google.com/search?q=Zhicheng+Xu"
+          />
         </Grid>
       </Grow>
     </Container>
