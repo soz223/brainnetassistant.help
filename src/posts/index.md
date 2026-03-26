@@ -17,18 +17,14 @@ We introduce practical guidelines for reproducible connectome generation, open r
 
 # Contribution
 
-We welcome contributions and feedback from the community. Please feel free to [email us](mailto:lih319@lehigh.edu).
+We welcome contributions and feedback from the community. Please feel free to [email us](mailto:soz223@lehigh.edu).
 
 # Citation
 
 Please cite our paper if you find BrainNet useful for your work:
 
 ```text
-@article{zhao2025brainnet,
-  title={BrainNet: A Systematic Benchmark for Functional Brain Network Generation and Analysis},
-  author={Zhao, Songlin and Luo, Xinwei and Gong, Ruonan and Yang, Yitian and Xu, Zhicheng and Chen, Jiaxin and Han, Keqi and Li, Xiang and Li, Quanzheng and Buckner, Randy L. and Sun, Lichao and Yang, Carl and Zhan, Liang and Zhang, Yu and He, Lifang},
-  year={2025}
-}
+
 ```
 
 ## Pipeline Overview
