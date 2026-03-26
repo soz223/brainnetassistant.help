@@ -90,25 +90,25 @@ function LeaderboardTable({ rows }) {
       <Table size="small">
         <TableHead>
           <TableRow>
-            <TableCell sx={headerStyle}>Group</TableCell>
-            <TableCell sx={headerStyle}>Method</TableCell>
-            <TableCell sx={headerStyle}>AUROC</TableCell>
-            <TableCell sx={headerStyle}>Acc</TableCell>
-            <TableCell sx={headerStyle}>Sens</TableCell>
-            <TableCell sx={headerStyle}>Spec</TableCell>
-            <TableCell sx={headerStyle}>F1</TableCell>
+            <TableCell sx={headerStyle} align="center">Group</TableCell>
+            <TableCell sx={headerStyle} align="center">Method</TableCell>
+            <TableCell sx={headerStyle} align="center">AUROC</TableCell>
+            <TableCell sx={headerStyle} align="center">Acc</TableCell>
+            <TableCell sx={headerStyle} align="center">Sens</TableCell>
+            <TableCell sx={headerStyle} align="center">Spec</TableCell>
+            <TableCell sx={headerStyle} align="center">F1</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row, i) => (
             <TableRow key={i} sx={{ backgroundColor: groupColors[row.group] || 'white' }}>
-              <TableCell>{row.group}</TableCell>
-              <TableCell>{row.method}</TableCell>
-              <TableCell>{row.auroc}</TableCell>
-              <TableCell>{row.acc}</TableCell>
-              <TableCell>{row.sens}</TableCell>
-              <TableCell>{row.spec}</TableCell>
-              <TableCell>{row.f1}</TableCell>
+              <TableCell align="center">{row.group}</TableCell>
+              <TableCell align="center">{row.method}</TableCell>
+              <TableCell align="center">{row.auroc}</TableCell>
+              <TableCell align="center">{row.acc}</TableCell>
+              <TableCell align="center">{row.sens}</TableCell>
+              <TableCell align="center">{row.spec}</TableCell>
+              <TableCell align="center">{row.f1}</TableCell>
             </TableRow>
           ))}
         </TableBody>
