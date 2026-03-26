@@ -43,6 +43,10 @@ const links = [
     href: 'https://pypi.org/project/brainnet-graph/',
     label: 'PyPI',
   },
+  {
+    href: 'http://128.180.121.111:8502/',
+    label: 'Demo',
+  },
 ]
 
 function MainMenu() {

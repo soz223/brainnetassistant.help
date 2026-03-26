@@ -67,7 +67,7 @@ const adhdRows = [
 const datasetMap = { 0: adniRows, 1: hcpRows, 2: adhdRows }
 const datasetLabels = [
   'ADNI (HC vs AD)',
-  'HCP S1200 (Gender)',
+  'HCP S1200 (F vs M)',
   'ADHD-200 (HC vs ADHD)',
 ]
 
